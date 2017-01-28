@@ -33,80 +33,85 @@ var sub10 = document.getElementById('sub10');
 var sub11 = document.getElementById('sub11');
 var mine = document.getElementById('mine');
 var total = document.getElementById('total');
+var numbers1 = parseInt(Cookies.get('numbers1'));
+var numbers2 = parseInt(Cookies.get('numbers2'));
+var numbers = ~~numbers1 + ~~numbers2;
+var incart1 = numbers1;
+var incart2 = numbers2;
 
 document.addEventListener("DOMContentLoaded",function(event){
 
 add1.onclick = function(){
-    Cookies.set('number', ~~Cookies.get('number') + ~~value1.value);
-    console.log(parseInt(Cookies.get('number')));
-	total.innerText = parseInt(Cookies.get('number'));
+    Cookies.set('numbers1', ~~Cookies.get('numbers1') + ~~value1.value);
+    console.log(parseInt(Cookies.get('numbers1')));
+    total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2'));
 };
-    var numbers = parseInt(Cookies.get('number'));
 
-	if (Cookies.get('number')){
+	if (Cookies.get('numbers')){
 		total.innerText = numbers;
 	}
+
 sub1.onclick = function(){
-    Cookies.set('number', ~~Cookies.get('number') - ~~value1.value);
-    console.log(parseInt(Cookies.get('number')));
-	total.innerText = parseInt(Cookies.get('number'));
+    Cookies.set('numbers1', ~~Cookies.get('numbers1') - ~~value1.value);
+    console.log(parseInt(Cookies.get('numbers1')));
+	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2'));
 };
 
-	if (Cookies.get('number')){
+	if (Cookies.get('numbers')){
 		total.innerText = numbers;
 	}
 add2.onclick = function(){
-    Cookies.set('number', ~~Cookies.get('number') + ~~value2.value);
-    console.log(parseInt(Cookies.get('number')));
-	total.innerText = parseInt(Cookies.get('number'));
+    Cookies.set('numbers2', ~~Cookies.get('numbers2') + ~~value2.value);
+    console.log(parseInt(Cookies.get('numbers2')));
+	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2'));
 };
 
-	if (Cookies.get('number')){
-		total.innerText = numbers;
-	}
-add3.onclick = function(){
-    Cookies.set('number', ~~Cookies.get('number') + ~~value3.value);
-    console.log(parseInt(Cookies.get('number')));
-	total.innerText = parseInt(Cookies.get('number'));
-};
-
-	if (Cookies.get('number')){
-		total.innerText = numbers;
-	}
-add4.onclick = function(){
-    Cookies.set('number', ~~Cookies.get('number') + ~~value4.value);
-    console.log(parseInt(Cookies.get('number')));
-	total.innerText = parseInt(Cookies.get('number'));
-};
-
-	if (Cookies.get('number')){
+	if (Cookies.get('numbers')){
 		total.innerText = numbers;
 	}
 sub2.onclick = function(){
-    Cookies.set('number', ~~Cookies.get('number') - ~~value2.value);
-    console.log(parseInt(Cookies.get('number')));
-	total.innerText = parseInt(Cookies.get('number'));
+    Cookies.set('numbers2', ~~Cookies.get('numbers2') - ~~value2.value);
+    console.log(parseInt(Cookies.get('numbers2')));
+	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2'));
 };
 
-	if (Cookies.get('number')){
+	if (Cookies.get('numbers')){
 		total.innerText = numbers;
 	}
-sub3.onclick = function(){
-    Cookies.set('number', ~~Cookies.get('number') - ~~value3.value);
-    console.log(parseInt(Cookies.get('number')));
-	total.innerText = parseInt(Cookies.get('number'));
-};
+// add3.onclick = function(){
+//     Cookies.set('number', ~~Cookies.get('number') + ~~value3.value);
+//     console.log(parseInt(Cookies.get('number')));
+// 	total.innerText = parseInt(Cookies.get('number'));
+// };
 
-	if (Cookies.get('number')){
-		total.innerText = numbers;
-	}
-sub4.onclick = function(){
-    Cookies.set('number', ~~Cookies.get('number') - ~~value4.value);
-    console.log(parseInt(Cookies.get('number')));
-	total.innerText = parseInt(Cookies.get('number'));
-};
+// 	if (Cookies.get('number')){
+// 		total.innerText = numbers;
+// 	}
+// add4.onclick = function(){
+//     Cookies.set('number', ~~Cookies.get('number') + ~~value4.value);
+//     console.log(parseInt(Cookies.get('number')));
+// 	total.innerText = parseInt(Cookies.get('number'));
+// };
 
-	if (Cookies.get('number')){
-		total.innerText = numbers;
-	}
+// 	if (Cookies.get('number')){
+// 		total.innerText = numbers;
+// 	}
+// sub3.onclick = function(){
+//     Cookies.set('number', ~~Cookies.get('number') - ~~value3.value);
+//     console.log(parseInt(Cookies.get('number')));
+// 	total.innerText = parseInt(Cookies.get('number'));
+// };
+
+// 	if (Cookies.get('number')){
+// 		total.innerText = numbers;
+// 	}
+// sub4.onclick = function(){
+//     Cookies.set('number', ~~Cookies.get('number') - ~~value4.value);
+//     console.log(parseInt(Cookies.get('number')));
+// 	total.innerText = parseInt(Cookies.get('number'));
+// };
+
+// 	if (Cookies.get('number')){
+// 		total.innerText = numbers;
+// 	}
 });
