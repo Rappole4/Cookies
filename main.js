@@ -9,109 +9,90 @@ var value8 = document.getElementById('value8');
 var value9 = document.getElementById('value9');
 var value10 = document.getElementById('value10');
 var value11 = document.getElementById('value11');
-var add1 = document.getElementById('add1');
-var add2 = document.getElementById('add2');
-var add3 = document.getElementById('add3');
-var add4 = document.getElementById('add4');
-var add5 = document.getElementById('add5');
-var add6 = document.getElementById('add6');
-var add7 = document.getElementById('add7');
-var add8 = document.getElementById('add8');
-var add9 = document.getElementById('add9');
-var add10 = document.getElementById('add10');
-var add11 = document.getElementById('add11');
-var sub1 = document.getElementById('sub1');
-var sub2 = document.getElementById('sub2');
-var sub3 = document.getElementById('sub3');
-var sub4 = document.getElementById('sub4');
-var sub5 = document.getElementById('sub5');
-var sub6 = document.getElementById('sub6');
-var sub7 = document.getElementById('sub7');
-var sub8 = document.getElementById('sub8');
-var sub9 = document.getElementById('sub9');
-var sub10 = document.getElementById('sub10');
-var sub11 = document.getElementById('sub11');
 var mine = document.getElementById('mine');
 var total = document.getElementById('total');
-var numbers1 = parseInt(Cookies.get('numbers1'));
-var numbers2 = parseInt(Cookies.get('numbers2'));
-var numbers = ~~numbers1 + ~~numbers2;
-var incart1 = numbers1;
-var incart2 = numbers2;
+var incart1 = document.getElementById('incart1');
+var incart2 = document.getElementById('incart2');
+var incart3 = document.getElementById('incart3');
+var incart4 = document.getElementById('incart4');
 
 document.addEventListener("DOMContentLoaded",function(event){
+
+	if (Cookies.get('numbers1'),Cookies.get('numbers2'),Cookies.get('numbers3'),Cookies.get('numbers4')){
+		total.innerText =  parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2')) + parseInt(Cookies.get('numbers3')) + parseInt(Cookies.get('numbers4'))
+		incart1.innerText = " Currently in cart:" + parseInt(Cookies.get('numbers1'))
+		incart2.innerText = " Currently in cart:" + parseInt(Cookies.get('numbers2'))
+		incart3.innerText = " Currently in cart:" + parseInt(Cookies.get('numbers3'))
+		incart4.innerText = " Currently in cart:" + parseInt(Cookies.get('numbers4'))
+	}
 
 add1.onclick = function(){
     Cookies.set('numbers1', ~~Cookies.get('numbers1') + ~~value1.value);
     console.log(parseInt(Cookies.get('numbers1')));
-    total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2'));
+    total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2')) + parseInt(Cookies.get('numbers3')) + parseInt(Cookies.get('numbers4'));
+    incart1.innerText = " Currently in cart:" + parseInt(Cookies.get('numbers1'));
 };
-
-	if (Cookies.get('numbers')){
-		total.innerText = numbers;
-	}
 
 sub1.onclick = function(){
     Cookies.set('numbers1', ~~Cookies.get('numbers1') - ~~value1.value);
     console.log(parseInt(Cookies.get('numbers1')));
-	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2'));
+	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2')) + parseInt(Cookies.get('numbers3')) + parseInt(Cookies.get('numbers4'));
+	incart1.innerText = " Currently in cart:" + parseInt(Cookies.get('numbers1'));
 };
 
-	if (Cookies.get('numbers')){
-		total.innerText = numbers;
-	}
 add2.onclick = function(){
     Cookies.set('numbers2', ~~Cookies.get('numbers2') + ~~value2.value);
     console.log(parseInt(Cookies.get('numbers2')));
-	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2'));
+	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2')) + parseInt(Cookies.get('numbers3')) + parseInt(Cookies.get('numbers4'));
+    incart2.innerText = " Currently in cart:" + parseInt(Cookies.get('numbers2'));
 };
 
-	if (Cookies.get('numbers')){
-		total.innerText = numbers;
-	}
 sub2.onclick = function(){
     Cookies.set('numbers2', ~~Cookies.get('numbers2') - ~~value2.value);
     console.log(parseInt(Cookies.get('numbers2')));
-	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2'));
+	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2')) + parseInt(Cookies.get('numbers3')) + parseInt(Cookies.get('numbers4'));
+    incart2.innerText = " Currently in cart:" + parseInt(Cookies.get('numbers2'));
 };
 
-	if (Cookies.get('numbers')){
-		total.innerText = numbers;
-	}
-// add3.onclick = function(){
-//     Cookies.set('number', ~~Cookies.get('number') + ~~value3.value);
-//     console.log(parseInt(Cookies.get('number')));
-// 	total.innerText = parseInt(Cookies.get('number'));
-// };
+add3.onclick = function(){
+    Cookies.set('numbers3', ~~Cookies.get('numbers3') + ~~value3.value);
+    console.log(parseInt(Cookies.get('numbers3')));
+	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2')) + parseInt(Cookies.get('numbers3')) + parseInt(Cookies.get('numbers4'));
+    incart3.innerText = " Currently in cart:" + parseInt(Cookies.get('numbers3'));
+};
 
-// 	if (Cookies.get('number')){
-// 		total.innerText = numbers;
-// 	}
-// add4.onclick = function(){
-//     Cookies.set('number', ~~Cookies.get('number') + ~~value4.value);
-//     console.log(parseInt(Cookies.get('number')));
-// 	total.innerText = parseInt(Cookies.get('number'));
-// };
+sub3.onclick = function(){
+    Cookies.set('numbers3', ~~Cookies.get('numbers3') - ~~value3.value);
+    console.log(parseInt(Cookies.get('numbers3')));
+	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2')) + parseInt(Cookies.get('numbers3')) + parseInt(Cookies.get('numbers4'));
+    incart3.innerText = " Currently in cart:" + parseInt(Cookies.get('numbers3'));
+};
 
-// 	if (Cookies.get('number')){
-// 		total.innerText = numbers;
-// 	}
-// sub3.onclick = function(){
-//     Cookies.set('number', ~~Cookies.get('number') - ~~value3.value);
-//     console.log(parseInt(Cookies.get('number')));
-// 	total.innerText = parseInt(Cookies.get('number'));
-// };
+add4.onclick = function(){
+    Cookies.set('numbers4', ~~Cookies.get('numbers4') + ~~value4.value);
+    console.log(parseInt(Cookies.get('numbers4')));
+	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2')) + parseInt(Cookies.get('numbers3')) + parseInt(Cookies.get('numbers4'));
+    incart4.innerText = " Currently in cart:" + parseInt(Cookies.get('numbers4'));
+};
 
-// 	if (Cookies.get('number')){
-// 		total.innerText = numbers;
-// 	}
-// sub4.onclick = function(){
-//     Cookies.set('number', ~~Cookies.get('number') - ~~value4.value);
-//     console.log(parseInt(Cookies.get('number')));
-// 	total.innerText = parseInt(Cookies.get('number'));
-// };
+sub4.onclick = function(){
+    Cookies.set('numbers4', ~~Cookies.get('numbers4') - ~~value4.value);
+    console.log(parseInt(Cookies.get('numbers4')));
+	total.innerText = parseInt(Cookies.get('numbers1')) + parseInt(Cookies.get('numbers2')) + parseInt(Cookies.get('numbers3')) + parseInt(Cookies.get('numbers4'));
+    incart4.innerText = " Currently in cart:" + parseInt(Cookies.get('numbers4'));
+};
 
-// 	if (Cookies.get('number')){
-// 		total.innerText = numbers;
-// 	}
+$(document).ready(function(){
+	$("#add1").click();
+	});
+$(document).ready(function(){
+	$("#add2").click();
+	});
+$(document).ready(function(){
+	$("#add3").click();
+	});
+$(document).ready(function(){
+	$("#add4").click();
+	});
+
 });
